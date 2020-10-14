@@ -6,6 +6,8 @@
 
 脚本测试见[Hausdorff Distance脚本测试.pdf](Hausdorff Distance脚本测试.pdf)
 
-运行[HausdorffGUI.py](HausdorffGUI.py)可启动[GUI](Hausdorff.xaml)，GUI测试通过
+运行[HausdorffGUI.py](HausdorffGUI.py)可启动[GUI](Hausdorff.xaml)，GUI测试通过，效果图如下
+
+![GUI](example.jpg)
 
 相关文章发表于[中华肿瘤杂志, 2017,39(12) : 942-945. DOI: 10.3760/cma.j.issn.0253-3766.2017.12.012](http://rs.yiigle.com/resource_static.jspx?contentId=1013835)
