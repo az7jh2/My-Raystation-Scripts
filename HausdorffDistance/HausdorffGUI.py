@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
-connect_ok = True
-try:
-  from connect import *
-except:
-  connect_ok = False
+#created by Ningshan Li, modified on 2015/12/13
+from connect import *
 
 import wpf
 from System import (DateTime, Windows, Globalization)
@@ -16,14 +13,16 @@ clr.ImportExtensions(System.Linq)
 
 from math import sqrt
 import threading
+from time import time
 #---------------------------------------------------------------------------------------------------#
 
 def EucliDis(a,b):
     return sqrt(sum([pow(a[i]-b[i],2) for i in range(len(a))]))
 
-   #全局变量X,mutex
+#全局变量X,mutex
 X=[]
-mutex=threading.Lock()   
+mutex=threading.Lock()
+
 def HausDis2(a,b):
     global X,mutex
     t1=[]
@@ -85,7 +84,6 @@ def RoiCoord(structure_set,x):
         print 'type of ROI is not matched'
     return c1
 #----------------------------------------------------------------------------# 
-   
 def ComputerDistance(structure_set,x,y):
     c1=RoiCoord(structure_set,x)
     c2=RoiCoord(structure_set,y)
@@ -98,14 +96,16 @@ class MeasurementWindow(Windows.Window):
     if self.cbImageSets.SelectedItem == 0 or self.cbImageSets.SelectedItem != self.selected_image_set:
       self.lVolA.Content = ""
       self.lVolB.Content = ""
-      self.lDice.Content = ""
-      #self.lPrec.Content = ""
-      #self.lSens.Content = ""
-      #self.lSpec.Content = ""
+      self.lHD.Content = ""
+      self.lComA.Content = ""
+      self.lComB.Content = ""
+      self.lTime.Content = ""
 
  
   # Eventhandler
   def compute_clicked(self, sender, event):
+    start=time()
+    
     self.selected_image_set = self.cbImageSets.SelectedItem
     self.selected_roi_a = self.cbRoiA.SelectedItem
     self.selected_roi_b = self.cbRoiB.SelectedItem
@@ -114,8 +114,6 @@ class MeasurementWindow(Windows.Window):
 
     rgA = structureSet.RoiGeometries[self.selected_roi_a]
     rgB = structureSet.RoiGeometries[self.selected_roi_b]
-
-    #measures = structureSet.ComparisonOfRoiGeometries(RoiA = self.selected_roi_a, RoiB = self.selected_roi_b)
     
     self.lRoiA.Content = self.selected_roi_a
     self.lRoiB.Content = self.selected_roi_b
@@ -129,14 +127,15 @@ class MeasurementWindow(Windows.Window):
     self.lComA.Content = "({0:.2F},{1:.2F},{2:.2F})".format(comA.x,comA.y, comA.z)
     self.lComB.Content = "({0:.2F},{1:.2F},{2:.2F})".format(comB.x,comB.y, comB.z)
 
-    self.lDice.Content = "{0:.3F}".format(ComputerDistance(structureSet,self.selected_roi_a,self.selected_roi_b))
-    #self.lPrec.Content = "{0:.3F}".format(measures["Precision"])
-    #self.lSens.Content = "{0:.3F}".format(measures["Sensitivity"])
-    #self.lSpec.Content = "{0:.3F}".format(measures["Specificity"])
-
+    self.lHD.Content = "{0:.3F}".format(ComputerDistance(structureSet,self.selected_roi_a,self.selected_roi_b))
+    
+    stop=time()
+    
+    self.lTime.Content = "{0:.2F}".format(stop-start)
+    
   def __init__(self, title, imagesets, roigeometries):
     
-    wpf.LoadComponent(self, "D:\hill103\Script\Hausdorff Distance\Hausdorff.xaml")
+    wpf.LoadComponent(self, "E:\Script\Hausdorff Distance\Hausdorff.xaml")
 
     self.Title = title
 
@@ -146,30 +145,17 @@ class MeasurementWindow(Windows.Window):
     self.selected_image_set = 0
 
     self.bCompute.Click += self.compute_clicked
-
-
-
-'''class RoiComparison:
-  def __init__(roiA, roiB, volumeA, volumeB, dice, precision):
-    self.roiA = roiA
-    self.roiB = roiB
-    self.volumeA = volumeA
-    self.volumeB = volumeB
-    self.dice = dice
-    self.precision = precision'''
-
 #####################################
 
-if connect_ok:
-  patient = get_current("Patient")
+patient = get_current("Patient")
 
-  imagesets = []
-  for examination in patient.Examinations:
+imagesets = []
+for examination in patient.Examinations:
     imagesets.Add(examination.Name)
 
-  roigeometries = []
-  for rg in patient.PatientModel.RegionsOfInterest:
+roigeometries = []
+for rg in patient.PatientModel.RegionsOfInterest:
     roigeometries.Add(rg.Name)
     
-  dialog = MeasurementWindow("Compute Hausdorff Distance",imagesets, roigeometries)
-  dialog.ShowDialog()
+dialog = MeasurementWindow("Compute Hausdorff Distance",imagesets, roigeometries)
+dialog.ShowDialog()
