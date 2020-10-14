@@ -4,7 +4,7 @@
 
 [DistanceMulti](DistanceMulti.py)模块为多线程运行脚本，所需执行时间比单线程要少，在主程序中导入不同的模块即可切换
 
-脚本测试见[Hausdorff Distance脚本测试.pdf](Hausdorff Distance脚本测试.pdf)
+脚本测试见[Hausdorff Distance脚本测试.pdf](Hausdorff%20Distance脚本测试.pdf)
 
 运行[HausdorffGUI.py](HausdorffGUI.py)可启动[GUI](Hausdorff.xaml)，GUI测试通过，效果图如下
 
