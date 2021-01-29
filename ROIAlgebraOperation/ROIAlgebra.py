@@ -6,6 +6,7 @@
 #Operation: Union or Intersection
 #margin less than 15cm
 #ResultOperation:None, Union, Intersection, Subtraction
+#Created by Ningshan Li, 2015-7-7
 #-------------------------------------------------------------------------#
 from connect import *
 #--------------------------------------------------------------------------#
@@ -167,13 +168,29 @@ def creatnt(patient,examination,roi,roiname,r1,color):
 #------------------------------------------------------------------------------#
 #Body，缩小的外轮廓
 def creatbodys(patient,examination,roi,roiname,r1,r2,color):
-    global newrois
+    global newrois,deleterois
+    
+    patient.PatientModel.CreateRoi(Name='temp0',Type='Undefined')
+    roi['temp0'].CreateMarginGeometry(Examination=examination,SourceRoiName=roiname,
+        MarginSettings={ 'Type': "Expand", 'Superior' : 0, 'Inferior': 0, 
+        'Anterior': 5, 'Posterior': 5, 'Right': 5, 'Left': 5 })
+    
+    patient.PatientModel.CreateRoi(Name='temp1',Type='Undefined')
+    roi['temp1'].CreateMarginGeometry(Examination=examination,SourceRoiName='temp0',
+        MarginSettings={ 'Type': "Expand", 'Superior' : 0, 'Inferior': 0, 
+        'Anterior': 5, 'Posterior': 5, 'Right': 5, 'Left': 5 })
+        
+    patient.PatientModel.CreateRoi(Name='temp2',Type='Undefined')
+    roi['temp2'].CreateMarginGeometry(Examination=examination,SourceRoiName='temp1',
+        MarginSettings={ 'Type': "Expand", 'Superior' : 0, 'Inferior': 0, 
+        'Anterior': 5, 'Posterior': 5, 'Right': 5, 'Left': 5 })
+        
     patient.PatientModel.CreateRoi(Name='Bodys',Color=color,Type='Undefined')
     roi['Bodys'].CreateAlgebraGeometry(Examination=examination,
       ExpressionA = { 'Operation': "Union", 'SourceRoiNames': 
-      [roiname], 'MarginSettings': { 'Type': "Expand", 
-      'Superior': r1, 'Inferior': r1, 'Anterior': r2, 'Posterior': r2, 
-      'Right': r2, 'Left': r2 } },
+      ['temp2'], 'MarginSettings': { 'Type': "Expand", 
+      'Superior': r1, 'Inferior': r1, 'Anterior': 5, 'Posterior': 5, 
+      'Right': 5, 'Left': 5 } },
       ExpressionB = { 'Operation': "Union", 
       'SourceRoiNames': ['External'], 'MarginSettings': { 
       'Type': "Contract", 'Superior': 0, 'Inferior': 0, 'Anterior': 
@@ -181,6 +198,7 @@ def creatbodys(patient,examination,roi,roiname,r1,r2,color):
       ResultOperation='Intersection')
       
     newrois.append('Bodys')
+    deleterois.extend(['temp0','temp1','temp2'])
 #------------------------------------------------------------------------------#
 #PTV收皮下,创建皮下一定距离ROI
 def bodycontract(patient,examination,roi,r,color):
@@ -248,7 +266,7 @@ def main(ROI):
             raise RuntimeError(i+' is not exist')
 
 #Body，缩小的外轮廓
-    creatbodys(patient,examination,roi,ROI[2],2,15,'Green')
+    creatbodys(patient,examination,roi,ROI[2],2,20,'Green')
 
 #PTV收皮下0.3cm
     bodycontract(patient,examination,roi,0.3,'Blue')
