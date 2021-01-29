@@ -13,11 +13,19 @@ from connect import *
 #全局变量newrois
 newrois=[]
 deleterois=[]
+#创建ROI，若有重名，则删除原有的ROI
+def creatroi(patient,roi,name,color='Blue',ty='Undefined'):
+    try:
+        patient.PatientModel.CreateRoi(Name=name,Color=color,Type=ty)
+    except:
+        roi[name].DeleteRoi()
+        patient.PatientModel.CreateRoi(Name=name,Color=color,Type=ty)
+#----------------------------------------------------------------------------#
 #PTV收皮下0.3cm
 def PTVinbody(patient,examination,roi,roiname,body,color):
     global newrois
     name=roiname+' in'
-    patient.PatientModel.CreateRoi(Name=name,Color=color,Type='Ptv')
+    creatroi(patient,roi,name,color,'Ptv')
     roi[name].CreateAlgebraGeometry(Examination=examination,
       ExpressionA = { 'Operation': "Intersection", 'SourceRoiNames': 
       [roiname,body], 'MarginSettings': { 'Type': "Expand", 
@@ -30,25 +38,25 @@ def PTVinbody(patient,examination,roi,roiname,body,color):
 def tworings(patient,examination,roi,roiname,r1,r2,r3,color,body):
     global newrois,deleterois
     name1=roiname+'+'+str(r1)
-    patient.PatientModel.CreateRoi(Name=name1,Type='Undefined')
+    creatroi(patient,roi,name1)
     roi[name1].CreateMarginGeometry(Examination=examination,SourceRoiName=roiname,
       MarginSettings={ 'Type': "Expand", 'Superior' : r1, 'Inferior': r1, 
       'Anterior': r1, 'Posterior': r1, 'Right': r1, 'Left': r1 })
     
     name2=roiname+'+'+str(r2)
-    patient.PatientModel.CreateRoi(Name=name2,Type='Undefined')
+    creatroi(patient,roi,name2)
     roi[name2].CreateMarginGeometry(Examination=examination,SourceRoiName=roiname,
       MarginSettings={ 'Type': "Expand", 'Superior' : r2, 'Inferior': r2, 
       'Anterior': r2, 'Posterior': r2, 'Right': r2, 'Left': r2 })
     
     name3=roiname+'+'+str(r3)
-    patient.PatientModel.CreateRoi(Name=name3,Type='Undefined')
+    creatroi(patient,roi,name3)
     roi[name3].CreateMarginGeometry(Examination=examination,SourceRoiName=roiname,
       MarginSettings={ 'Type': "Expand", 'Superior' : r3, 'Inferior': r3, 
       'Anterior': r3, 'Posterior': r3, 'Right': r3, 'Left': r3 })
       
     ring1='ring1_'+roiname
-    patient.PatientModel.CreateRoi(Name=ring1,Color=color[0],Type='Avoidance')
+    creatroi(patient,roi,ring1,color[0],'Avoidance')
     roi[ring1].CreateAlgebraGeometry(Examination=examination,
       ExpressionA = { 'Operation': "Intersection", 'SourceRoiNames': 
       [name2,body], 'MarginSettings': { 'Type': "Expand", 
@@ -61,7 +69,7 @@ def tworings(patient,examination,roi,roiname,r1,r2,r3,color,body):
       ResultOperation='Subtraction')
       
     ring2='ring2_'+roiname
-    patient.PatientModel.CreateRoi(Name=ring2,Color=color[1],Type='Avoidance')
+    creatroi(patient,roi,ring2,color[1],'Avoidance')
     roi[ring2].CreateAlgebraGeometry(Examination=examination,
       ExpressionA = { 'Operation': "Intersection", 'SourceRoiNames': 
       [name3,body], 'MarginSettings': { 'Type': "Expand", 
@@ -80,31 +88,31 @@ def tworings(patient,examination,roi,roiname,r1,r2,r3,color,body):
 def threerings(patient,examination,roi,roiname,r1,r2,r3,r4,color,body):
     global newrois,deleterois
     name1=roiname+'+'+str(r1)
-    patient.PatientModel.CreateRoi(Name=name1,Type='Undefined')
+    creatroi(patient,roi,name1)
     roi[name1].CreateMarginGeometry(Examination=examination,SourceRoiName=roiname,
       MarginSettings={ 'Type': "Expand", 'Superior' : r1, 'Inferior': r1, 
       'Anterior': r1, 'Posterior': r1, 'Right': r1, 'Left': r1 })
     
     name2=roiname+'+'+str(r2)
-    patient.PatientModel.CreateRoi(Name=name2,Type='Undefined')
+    creatroi(patient,roi,name2)
     roi[name2].CreateMarginGeometry(Examination=examination,SourceRoiName=roiname,
       MarginSettings={ 'Type': "Expand", 'Superior' : r2, 'Inferior': r2, 
       'Anterior': r2, 'Posterior': r2, 'Right': r2, 'Left': r2 })
     
     name3=roiname+'+'+str(r3)
-    patient.PatientModel.CreateRoi(Name=name3,Type='Undefined')
+    creatroi(patient,roi,name3)
     roi[name3].CreateMarginGeometry(Examination=examination,SourceRoiName=roiname,
       MarginSettings={ 'Type': "Expand", 'Superior' : r3, 'Inferior': r3, 
       'Anterior': r3, 'Posterior': r3, 'Right': r3, 'Left': r3 })
       
     name4=roiname+'+'+str(r4)
-    patient.PatientModel.CreateRoi(Name=name4,Type='Undefined')
+    creatroi(patient,roi,name4)
     roi[name4].CreateMarginGeometry(Examination=examination,SourceRoiName=roiname,
       MarginSettings={ 'Type': "Expand", 'Superior' : r4, 'Inferior': r4, 
       'Anterior': r4, 'Posterior': r4, 'Right': r4, 'Left': r4 })
     
     ring1='ring1_'+roiname
-    patient.PatientModel.CreateRoi(Name=ring1,Color=color[0],Type='Avoidance')
+    creatroi(patient,roi,ring1,color[0],'Avoidance')
     roi[ring1].CreateAlgebraGeometry(Examination=examination,
       ExpressionA = { 'Operation': "Intersection", 'SourceRoiNames': 
       [name2,body], 'MarginSettings': { 'Type': "Expand", 
@@ -117,7 +125,7 @@ def threerings(patient,examination,roi,roiname,r1,r2,r3,r4,color,body):
       ResultOperation='Subtraction')
       
     ring2='ring2_'+roiname
-    patient.PatientModel.CreateRoi(Name=ring2,Color=color[1],Type='Avoidance')
+    creatroi(patient,roi,ring2,color[1],'Avoidance')
     roi[ring2].CreateAlgebraGeometry(Examination=examination,
       ExpressionA = { 'Operation': "Intersection", 'SourceRoiNames': 
       [name3,body], 'MarginSettings': { 'Type': "Expand", 
@@ -130,7 +138,7 @@ def threerings(patient,examination,roi,roiname,r1,r2,r3,r4,color,body):
       ResultOperation='Subtraction')
     
     ring3='ring3_'+roiname
-    patient.PatientModel.CreateRoi(Name=ring3,Color=color[2],Type='Avoidance')
+    creatroi(patient,roi,ring3,color[2],'Avoidance')
     roi[ring3].CreateAlgebraGeometry(Examination=examination,
       ExpressionA = { 'Operation': "Intersection", 'SourceRoiNames': 
       [name4,body], 'MarginSettings': { 'Type': "Expand", 
@@ -152,10 +160,10 @@ def creatnt(patient,examination,roi,roiname,r1,color):
     ring1='ring1_'+roiname
     ring2='ring2_'+roiname
     ring3='ring3_'+roiname
-    patient.PatientModel.CreateRoi(Name='nt',Color=color,Type='Undefined')
+    creatroi(patient,roi,'nt',color,'Avoidance')
     roi['nt'].CreateAlgebraGeometry(Examination=examination,
       ExpressionA = { 'Operation': "Union", 'SourceRoiNames': 
-      ['Bodys'], 'MarginSettings': { 'Type': "Expand", 
+      ['Bodys-0.3'], 'MarginSettings': { 'Type': "Expand", 
       'Superior': 0, 'Inferior': 0, 'Anterior': 0, 'Posterior': 0, 
       'Right': 0, 'Left': 0 } },
       ExpressionB = { 'Operation': "Union", 
@@ -167,44 +175,62 @@ def creatnt(patient,examination,roi,roiname,r1,color):
     newrois.append('nt')
 #------------------------------------------------------------------------------#
 #Body，缩小的外轮廓
-def creatbodys(patient,examination,roi,roiname,r1,r2,color):
+#Copy ROI无法Scripting
+def creatbodys(patient,examination,roi,roiname,externalname,color):
     global newrois,deleterois
+    #获取Z-range
+    roigeo=patient.PatientModel.StructureSets[examination.Name].RoiGeometries[roiname]
+    [zmin,zmax]=zrange(roigeo)
     
-    patient.PatientModel.CreateRoi(Name='temp0',Type='Undefined')
-    roi['temp0'].CreateMarginGeometry(Examination=examination,SourceRoiName=roiname,
-        MarginSettings={ 'Type': "Expand", 'Superior' : 0, 'Inferior': 0, 
-        'Anterior': 5, 'Posterior': 5, 'Right': 5, 'Left': 5 })
+    externalgeo=patient.PatientModel.StructureSets[examination.Name].RoiGeometries[externalname]
+    [size,center]=boxsize(externalgeo,zmin,zmax)
     
-    patient.PatientModel.CreateRoi(Name='temp1',Type='Undefined')
-    roi['temp1'].CreateMarginGeometry(Examination=examination,SourceRoiName='temp0',
-        MarginSettings={ 'Type': "Expand", 'Superior' : 0, 'Inferior': 0, 
-        'Anterior': 5, 'Posterior': 5, 'Right': 5, 'Left': 5 })
-        
-    patient.PatientModel.CreateRoi(Name='temp2',Type='Undefined')
-    roi['temp2'].CreateMarginGeometry(Examination=examination,SourceRoiName='temp1',
-        MarginSettings={ 'Type': "Expand", 'Superior' : 0, 'Inferior': 0, 
-        'Anterior': 5, 'Posterior': 5, 'Right': 5, 'Left': 5 })
-        
-    patient.PatientModel.CreateRoi(Name='Bodys',Color=color,Type='Undefined')
+    creatroi(patient,roi,'Box')
+    roi['Box'].CreateBoxGeometry(Size =  size , Examination = examination , Center = center)
+    
+    creatroi(patient,roi,'Bodys',color)
     roi['Bodys'].CreateAlgebraGeometry(Examination=examination,
-      ExpressionA = { 'Operation': "Union", 'SourceRoiNames': 
-      ['temp2'], 'MarginSettings': { 'Type': "Expand", 
-      'Superior': r1, 'Inferior': r1, 'Anterior': 5, 'Posterior': 5, 
-      'Right': 5, 'Left': 5 } },
-      ExpressionB = { 'Operation': "Union", 
-      'SourceRoiNames': ['External'], 'MarginSettings': { 
-      'Type': "Contract", 'Superior': 0, 'Inferior': 0, 'Anterior': 
-      0, 'Posterior': 0, 'Right': 0, 'Left': 0 } },
-      ResultOperation='Intersection')
+          ExpressionA = { 'Operation': "Union", 'SourceRoiNames': 
+          ['Box'], 'MarginSettings': { 'Type': "Expand", 
+          'Superior': 0, 'Inferior': 0, 'Anterior': 0, 'Posterior': 0, 
+          'Right': 0, 'Left': 0 } },
+          ExpressionB = { 'Operation': "Union", 
+          'SourceRoiNames': [externalname], 'MarginSettings': { 
+          'Type': "Expand", 'Superior': 0, 'Inferior': 0, 'Anterior': 
+          0, 'Posterior': 0, 'Right': 0, 'Left': 0 } },
+          ResultOperation='Intersection')
       
     newrois.append('Bodys')
-    deleterois.extend(['temp0','temp1','temp2'])
+    deleterois.extend(['Box'])
 #------------------------------------------------------------------------------#
+#获取ROI的z-range
+def zrange(roigeometry):
+    bbox = roigeometry.GetBoundingBox()
+    if bbox.Count==2:
+        return bbox[0].z,bbox[1].z
+    else:
+        raise Exception('The length of BoundingBox is not equal 2')
+#------------------------------------------------------------------------------#
+def boxsize(roigeometry,zmin,zmax):
+    bbox = roigeometry.GetBoundingBox()
+    if bbox.Count==2:
+        xsize = bbox[1].x - bbox[0].x + 2.0
+        ysize = bbox[1].y - bbox[0].y + 2.0
+        zsize = abs(zmax - zmin) + 2.0
+        xcenter=roigeometry.GetCenterOfRoi().x
+        ycenter=roigeometry.GetCenterOfRoi().y
+        zcenter=zmin+(zmax-zmin)/2
+        size = {"x":xsize , "y": ysize, "z":zsize}
+        center = {"x":xcenter, "y":ycenter, "z":zcenter}
+        return size,center
+    else:
+        raise Exception('The length of BoundingBox is not equal 2')
+#--------------------------------------------------------------------------------#
 #PTV收皮下,创建皮下一定距离ROI
 def bodycontract(patient,examination,roi,r,color):
     global newrois
     name='Bodys-'+str(r)
-    patient.PatientModel.CreateRoi(Name=name,Color=color,Type='Undefined')      
+    creatroi(patient,roi,name,color)      
     roi[name].CreateMarginGeometry(Examination=examination,SourceRoiName='Bodys',
       MarginSettings={ 'Type': "Contract", 'Superior' : 0.0, 'Inferior': 0.0, 
       'Anterior': r, 'Posterior': r, 'Right': r, 'Left': r })
@@ -219,7 +245,7 @@ def PTVconsubtract(patient,examination,roi,roiAname,roiBname,r,color):
     rois=[]
     for rg in patient.PatientModel.StructureSets[examination.Name].RoiGeometries:
         rois.append(rg.OfRoi.Name)
-    patient.PatientModel.CreateRoi(Name=Bname,Color=color,Type='Ptv')
+    creatroi(patient,roi,Bname,color,'Ptv')
     if Aname in rois:
         roi[Bname].CreateAlgebraGeometry(Examination=examination,
           ExpressionA = { 'Operation': "Union", 'SourceRoiNames': 
@@ -263,10 +289,17 @@ def main(ROI):
         roilist.append(rg.OfRoi.Name)
     for i in ROI:
         if not(i in roilist):
-            raise RuntimeError(i+' is not exist')
+            raise Exception('ROI {0} is not exist'.format(i))
+
+#寻找外轮廓
+    try:
+        external_roi = next(r for r in roi if r.Type == 'External')
+    except:
+        raise Exception('No external ROI defined')
+    extername=external_roi.Name
 
 #Body，缩小的外轮廓
-    creatbodys(patient,examination,roi,ROI[2],2,20,'Green')
+    creatbodys(patient,examination,roi,ROI[2],extername,'Green')
 
 #PTV收皮下0.3cm
     bodycontract(patient,examination,roi,0.3,'Blue')
@@ -298,4 +331,4 @@ def main(ROI):
     
 #-----------------------------------------------------------------------------#
 if __name__=='__main__':
-    main(['PGTV','PCTV1','PCTV2','External']) 
+    main(['PGTV','PCTV1','PCTV2']) 
