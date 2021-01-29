@@ -1,0 +1,120 @@
+<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Height="400" Width ="1000" WindowStyle="ToolWindow">
+
+  <DockPanel Height="Auto">
+    <!--<Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>-->
+
+      <Grid DockPanel.Dock="Top" Margin="5">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Image set:"  HorizontalAlignment="Left"/>
+        <ComboBox Grid.Row="1" Grid.Column="0" Name="cbImageSets" Width="200" HorizontalAlignment="Left" DropDownClosed="OnDropDownImageSetsClosed" Margin="0,0,5,0"/>
+        <Label Grid.Row="0" Grid.Column="1" Content="Roi A:"  HorizontalAlignment="Left"/>
+        <ComboBox Grid.Row="1" Grid.Column="1" Name="cbRoiA" Width="200" HorizontalAlignment="Left" Margin="0,0,5,0"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="Roi B:"  HorizontalAlignment="Left"/>
+        <ComboBox Grid.Row="1" Grid.Column="2" Name="cbRoiB" Width="200" HorizontalAlignment="Left" Margin="0,0,5,0"/>
+        <Button Grid.Row ="1" Grid.Column="3" Content="Compute statistics" Name="bCompute" Width="200" HorizontalAlignment="Right" Margin="10,0,0,0"/>
+      </Grid>
+
+      <Grid DockPanel.Dock="Top" Margin="5">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="100"/>
+          <ColumnDefinition Width="200"/>
+          <ColumnDefinition Width="100"/>
+          <ColumnDefinition Width="200"/>
+          <ColumnDefinition Width="100" />
+          <ColumnDefinition Width="100" />
+          <ColumnDefinition Width="100" />
+          <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="1" Content="Roi name"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="Volume [cm^3]"/>
+        <Label Grid.Row="0" Grid.Column="3" Content="Center of ROI [dicom]"/>
+        <Label Grid.Row="0" Grid.Column="4" Content="Dice index" />
+        <Label Grid.Row="0" Grid.Column="5" Content="Precision" />
+        <Label Grid.Row="0" Grid.Column="6" Content="Sensitivity" />
+        <Label Grid.Row="0" Grid.Column="7" Content="Specificity" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Roi A" />
+        <Label Grid.Row="2" Grid.Column="0" Content="Roi B" />
+
+        <Label Grid.Row="1" Grid.Column="1" Name="lRoiA" />
+        <Label Grid.Row="2" Grid.Column="1" Name="lRoiB" />
+
+        <Label Grid.Row="1" Grid.Column="2" Name="lVolA"/>
+        <Label Grid.Row="2" Grid.Column="2" Name="lVolB"/>
+
+        <Label Grid.Row="1" Grid.Column="3" Name="lComA"/>
+        <Label Grid.Row="2" Grid.Column="3" Name="lComB"/>
+
+        <Label Grid.Row="1" Grid.RowSpan="2" Grid.Column="4" Name="lDice" VerticalAlignment ="Center"/>
+        <Label Grid.Row="1" Grid.RowSpan="2" Grid.Column="5" Name="lPrec" VerticalAlignment ="Center"/>
+        <Label Grid.Row="1" Grid.RowSpan="2" Grid.Column="6" Name="lSens" VerticalAlignment ="Center"/>
+        <Label Grid.Row="1" Grid.RowSpan="2" Grid.Column="7" Name="lSpec" VerticalAlignment ="Center"/>
+
+      </Grid>
+
+      <Grid DockPanel.Dock="Bottom" Margin="5">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="200" />
+          <ColumnDefinition Width="400" />
+        </Grid.ColumnDefinitions>
+
+        <Separator Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="2" Height="2" Width="600" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Dice similarity index" />
+        <Label Grid.Row="2" Grid.Column="0" Content="Precision" />
+        <Label Grid.Row="3" Grid.Column="0" Content="Sensitivity" />
+        <Label Grid.Row="4" Grid.Column="0" Content="Specificity" />
+
+        <TextBlock Grid.Row="1" Grid.Column="1" TextWrapping="Wrap">
+          2 | RoiA intersect RoiB | / | RoiA | + | RoiB |
+        </TextBlock>
+
+        <TextBlock Grid.Row="2" Grid.Column="1" TextWrapping="Wrap">
+          | RoiA intersect RoiB | / | RoiA union RoiB |
+        </TextBlock>
+
+        <TextBlock Grid.Row="3" Grid.Column="1" TextWrapping="Wrap">
+          | RoiA intersect RoiB | / | RoiA |
+        </TextBlock>
+
+        <TextBlock Grid.Row="4" Grid.Column="1" TextWrapping="Wrap">
+          1 - | RoiB and not RoiA | / | RoiA |
+        </TextBlock>
+
+      </Grid>
+
+  </DockPanel>
+
+</Window>
