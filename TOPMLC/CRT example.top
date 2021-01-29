@@ -1,0 +1,353 @@
+Usage = TP_APERTURE
+Patient Name = ÌÆÔÆ»Ô
+Patient ID = 3927
+Planning Time = 12-10-2015, 16:18:46
+Planning System = Topslane TPS 1.0.1978.138.V2.204161
+Plan UID = 1.2.840.123456.2.22.287.2.20151031.7.7
+Plan Fraction = 25
+Total Beam Number = 7
+
+DMLC = Topslane_M (27 Pairs)
+MLC Leaves Pair Number = 27
+Max Overtravel Distance(cm) = 8.0
+Source to MLC Top Edge Distance(cm) = 54.1
+DoseRate = 0
+
+Beam = Beam001
+Gantry Angle = 265.0
+Collimator Angle = 0.0
+Turntable Angle = 0.0
+
+Fieldsize X(cm) = 7.1
+Fieldsize Y(cm) = 7.4
+Beam Jaw X1(cm) = 2.9
+Beam Jaw X2(cm) = 4.2
+Beam Jaw Y1(cm) = 3.7
+Beam Jaw Y2(cm) = 3.7
+Machine Energy = 6.0
+Machine Name = Varian 600C-6MV
+Source Axis Distance(cm) = 100.00
+
+Total Segment Number = 1
+
+Field No. = 1-1
+Field MU = 85.0
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = 0.16,  LeafR0 = -0.16
+LeafL1 = 0.16,  LeafR1 = -0.16
+LeafL2 = 0.16,  LeafR2 = -0.16
+LeafL3 = 0.16,  LeafR3 = -0.16
+LeafL4 = 0.16,  LeafR4 = -0.01
+LeafL5 = 1.70,  LeafR5 = -0.06
+LeafL6 = 2.65,  LeafR6 = 0.39
+LeafL7 = 3.55,  LeafR7 = 0.69
+LeafL8 = 3.65,  LeafR8 = 3.60
+LeafL9 = 3.65,  LeafR9 = 3.60
+LeafL10 = 3.65,  LeafR10 = 3.60
+LeafL11 = 3.65,  LeafR11 = 3.60
+LeafL12 = 3.65,  LeafR12 = 3.60
+LeafL13 = 3.65,  LeafR13 = 3.60
+LeafL14 = 3.65,  LeafR14 = 3.60
+LeafL15 = 3.65,  LeafR15 = 3.60
+LeafL16 = 3.65,  LeafR16 = 3.60
+LeafL17 = 3.65,  LeafR17 = 3.60
+LeafL18 = 2.56,  LeafR18 = 2.87
+LeafL19 = 1.33,  LeafR19 = 2.10
+LeafL20 = -1.91,  LeafR20 = 2.06
+LeafL21 = -2.06,  LeafR21 = 2.06
+LeafL22 = -2.06,  LeafR22 = 2.06
+LeafL23 = -2.06,  LeafR23 = 2.06
+LeafL24 = -2.06,  LeafR24 = 2.06
+LeafL25 = -2.06,  LeafR25 = 2.06
+LeafL26 = -2.06,  LeafR26 = 2.06
+
+Beam = Beam002
+Gantry Angle = 357.0
+Collimator Angle = 0.0
+Turntable Angle = 0.0
+
+Fieldsize X(cm) = 9.6
+Fieldsize Y(cm) = 7.6
+Beam Jaw X1(cm) = 4.8
+Beam Jaw X2(cm) = 4.8
+Beam Jaw Y1(cm) = 3.8
+Beam Jaw Y2(cm) = 3.8
+Machine Energy = 6.0
+Machine Name = Varian 600C-6MV
+Source Axis Distance(cm) = 100.00
+
+Total Segment Number = 1
+
+Field No. = 1-1
+Field MU = 85.0
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -3.40,  LeafR0 = 3.40
+LeafL1 = -3.40,  LeafR1 = 3.40
+LeafL2 = -3.40,  LeafR2 = 3.40
+LeafL3 = -0.40,  LeafR3 = 3.40
+LeafL4 = 0.25,  LeafR4 = 3.65
+LeafL5 = 1.74,  LeafR5 = 3.70
+LeafL6 = 2.29,  LeafR6 = 3.70
+LeafL7 = 2.68,  LeafR7 = 3.70
+LeafL8 = 3.16,  LeafR8 = 3.70
+LeafL9 = 3.70,  LeafR9 = 3.70
+LeafL10 = 3.70,  LeafR10 = 3.70
+LeafL11 = 3.70,  LeafR11 = 3.70
+LeafL12 = 3.70,  LeafR12 = 3.34
+LeafL13 = 3.70,  LeafR13 = 3.25
+LeafL14 = 3.65,  LeafR14 = 3.10
+LeafL15 = 3.65,  LeafR15 = 3.15
+LeafL16 = 3.65,  LeafR16 = 3.06
+LeafL17 = 3.65,  LeafR17 = 3.70
+LeafL18 = 3.05,  LeafR18 = 3.70
+LeafL19 = 2.48,  LeafR19 = 3.70
+LeafL20 = 2.37,  LeafR20 = 3.70
+LeafL21 = 2.01,  LeafR21 = 3.70
+LeafL22 = 0.42,  LeafR22 = 3.70
+LeafL23 = -0.23,  LeafR23 = 2.76
+LeafL24 = -2.76,  LeafR24 = 2.76
+LeafL25 = -2.76,  LeafR25 = 2.76
+LeafL26 = -2.76,  LeafR26 = 2.76
+
+Beam = Beam003
+Gantry Angle = 88.0
+Collimator Angle = 0.0
+Turntable Angle = 0.0
+
+Fieldsize X(cm) = 6.5
+Fieldsize Y(cm) = 7.5
+Beam Jaw X1(cm) = 3.9
+Beam Jaw X2(cm) = 2.6
+Beam Jaw Y1(cm) = 3.7
+Beam Jaw Y2(cm) = 3.8
+Machine Energy = 6.0
+Machine Name = Varian 600C-6MV
+Source Axis Distance(cm) = 100.00
+
+Total Segment Number = 1
+
+Field No. = 1-1
+Field MU = 84.0
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -2.40,  LeafR0 = 2.40
+LeafL1 = -2.40,  LeafR1 = 2.40
+LeafL2 = -2.40,  LeafR2 = 2.40
+LeafL3 = -2.40,  LeafR3 = 2.40
+LeafL4 = -2.40,  LeafR4 = 2.40
+LeafL5 = -2.25,  LeafR5 = 2.40
+LeafL6 = -2.25,  LeafR6 = 2.40
+LeafL7 = 2.40,  LeafR7 = 2.64
+LeafL8 = 3.60,  LeafR8 = 3.45
+LeafL9 = 3.70,  LeafR9 = 3.90
+LeafL10 = 3.70,  LeafR10 = 3.90
+LeafL11 = 3.70,  LeafR11 = 3.90
+LeafL12 = 3.70,  LeafR12 = 3.90
+LeafL13 = 3.70,  LeafR13 = 3.90
+LeafL14 = 3.65,  LeafR14 = 3.90
+LeafL15 = 3.65,  LeafR15 = 3.90
+LeafL16 = 3.65,  LeafR16 = 3.90
+LeafL17 = 3.65,  LeafR17 = 3.90
+LeafL18 = 3.65,  LeafR18 = 3.90
+LeafL19 = 3.00,  LeafR19 = 3.85
+LeafL20 = 1.94,  LeafR20 = 0.88
+LeafL21 = -0.28,  LeafR21 = 0.43
+LeafL22 = -0.43,  LeafR22 = 0.43
+LeafL23 = -0.43,  LeafR23 = 0.43
+LeafL24 = -0.43,  LeafR24 = 0.43
+LeafL25 = -0.43,  LeafR25 = 0.43
+LeafL26 = -0.43,  LeafR26 = 0.43
+
+Beam = Beam004
+Gantry Angle = 130.0
+Collimator Angle = 0.0
+Turntable Angle = 0.0
+
+Fieldsize X(cm) = 6.1
+Fieldsize Y(cm) = 14.1
+Beam Jaw X1(cm) = 2.9
+Beam Jaw X2(cm) = 3.2
+Beam Jaw Y1(cm) = 7.4
+Beam Jaw Y2(cm) = 6.7
+Machine Energy = 6.0
+Machine Name = Varian 600C-6MV
+Source Axis Distance(cm) = 100.00
+
+Total Segment Number = 1
+
+Field No. = 1-1
+Field MU = 81.0
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -3.21,  LeafR0 = 3.21
+LeafL1 = -3.21,  LeafR1 = 3.21
+LeafL2 = -3.21,  LeafR2 = 3.21
+LeafL3 = -3.21,  LeafR3 = 3.21
+LeafL4 = -3.21,  LeafR4 = 3.21
+LeafL5 = -3.21,  LeafR5 = 3.21
+LeafL6 = -3.06,  LeafR6 = 3.21
+LeafL7 = -3.03,  LeafR7 = 7.25
+LeafL8 = -1.52,  LeafR8 = 7.30
+LeafL9 = 1.34,  LeafR9 = 7.30
+LeafL10 = 7.05,  LeafR10 = 7.30
+LeafL11 = 7.30,  LeafR11 = 7.30
+LeafL12 = 7.35,  LeafR12 = 7.30
+LeafL13 = 7.35,  LeafR13 = 7.30
+LeafL14 = 7.30,  LeafR14 = 7.30
+LeafL15 = 7.30,  LeafR15 = 7.30
+LeafL16 = 7.30,  LeafR16 = 7.30
+LeafL17 = 7.30,  LeafR17 = 7.30
+LeafL18 = 6.26,  LeafR18 = 7.10
+LeafL19 = 6.06,  LeafR19 = 6.70
+LeafL20 = 1.86,  LeafR20 = -1.71
+LeafL21 = 1.86,  LeafR21 = -1.86
+LeafL22 = 1.86,  LeafR22 = -1.86
+LeafL23 = 1.86,  LeafR23 = -1.86
+LeafL24 = 1.86,  LeafR24 = -1.86
+LeafL25 = 1.86,  LeafR25 = -1.86
+LeafL26 = 1.86,  LeafR26 = -1.86
+
+Beam = Beam005
+Gantry Angle = 354.0
+Collimator Angle = 0.0
+Turntable Angle = 0.0
+
+Fieldsize X(cm) = 7.9
+Fieldsize Y(cm) = 14.1
+Beam Jaw X1(cm) = 3.4
+Beam Jaw X2(cm) = 4.5
+Beam Jaw Y1(cm) = 7.4
+Beam Jaw Y2(cm) = 6.7
+Machine Energy = 6.0
+Machine Name = Varian 600C-6MV
+Source Axis Distance(cm) = 100.00
+
+Total Segment Number = 1
+
+Field No. = 1-1
+Field MU = 148.0
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -5.40,  LeafR0 = 5.40
+LeafL1 = -5.40,  LeafR1 = 5.40
+LeafL2 = -5.40,  LeafR2 = 5.40
+LeafL3 = -5.25,  LeafR3 = 5.40
+LeafL4 = -2.95,  LeafR4 = 5.40
+LeafL5 = -1.49,  LeafR5 = 5.40
+LeafL6 = 0.55,  LeafR6 = 5.95
+LeafL7 = 6.37,  LeafR7 = 6.50
+LeafL8 = 6.70,  LeafR8 = 6.75
+LeafL9 = 7.10,  LeafR9 = 6.95
+LeafL10 = 7.35,  LeafR10 = 7.25
+LeafL11 = 7.50,  LeafR11 = 7.30
+LeafL12 = 7.50,  LeafR12 = 7.30
+LeafL13 = 7.50,  LeafR13 = 7.30
+LeafL14 = 7.45,  LeafR14 = 7.30
+LeafL15 = 7.45,  LeafR15 = 7.30
+LeafL16 = 7.45,  LeafR16 = 7.30
+LeafL17 = 7.45,  LeafR17 = 7.30
+LeafL18 = 7.45,  LeafR18 = 7.30
+LeafL19 = 7.45,  LeafR19 = 7.30
+LeafL20 = 0.41,  LeafR20 = 7.30
+LeafL21 = 0.46,  LeafR21 = -0.31
+LeafL22 = 0.46,  LeafR22 = -0.46
+LeafL23 = 0.46,  LeafR23 = -0.46
+LeafL24 = 0.46,  LeafR24 = -0.46
+LeafL25 = 0.46,  LeafR25 = -0.46
+LeafL26 = 0.46,  LeafR26 = -0.46
+
+Beam = Beam006
+Gantry Angle = 228.0
+Collimator Angle = 0.0
+Turntable Angle = 0.0
+
+Fieldsize X(cm) = 5.9
+Fieldsize Y(cm) = 14.1
+Beam Jaw X1(cm) = 3.0
+Beam Jaw X2(cm) = 2.9
+Beam Jaw Y1(cm) = 7.4
+Beam Jaw Y2(cm) = 6.7
+Machine Energy = 6.0
+Machine Name = Varian 600C-6MV
+Source Axis Distance(cm) = 100.00
+
+Total Segment Number = 1
+
+Field No. = 1-1
+Field MU = 87.0
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -0.98,  LeafR0 = 0.98
+LeafL1 = -0.98,  LeafR1 = 0.98
+LeafL2 = -0.98,  LeafR2 = 0.98
+LeafL3 = -0.98,  LeafR3 = 0.98
+LeafL4 = -0.98,  LeafR4 = 0.98
+LeafL5 = -0.98,  LeafR5 = 0.98
+LeafL6 = -0.83,  LeafR6 = 0.98
+LeafL7 = -0.82,  LeafR7 = 0.97
+LeafL8 = 7.05,  LeafR8 = 6.75
+LeafL9 = 7.30,  LeafR9 = 7.20
+LeafL10 = 7.35,  LeafR10 = 7.30
+LeafL11 = 7.35,  LeafR11 = 7.30
+LeafL12 = 7.35,  LeafR12 = 7.30
+LeafL13 = 6.51,  LeafR13 = 7.30
+LeafL14 = 6.34,  LeafR14 = 7.30
+LeafL15 = 6.40,  LeafR15 = 7.30
+LeafL16 = 7.30,  LeafR16 = 7.30
+LeafL17 = 5.94,  LeafR17 = 7.30
+LeafL18 = 0.83,  LeafR18 = 7.30
+LeafL19 = -3.81,  LeafR19 = 7.30
+LeafL20 = -3.88,  LeafR20 = 4.03
+LeafL21 = -4.03,  LeafR21 = 4.03
+LeafL22 = -4.03,  LeafR22 = 4.03
+LeafL23 = -4.03,  LeafR23 = 4.03
+LeafL24 = -4.03,  LeafR24 = 4.03
+LeafL25 = -4.03,  LeafR25 = 4.03
+LeafL26 = -4.03,  LeafR26 = 4.03
+
+Beam = Beam007
+Gantry Angle = 0.0
+Collimator Angle = 0.0
+Turntable Angle = 0.0
+
+Fieldsize X(cm) = 8.4
+Fieldsize Y(cm) = 14.2
+Beam Jaw X1(cm) = 4.6
+Beam Jaw X2(cm) = 3.8
+Beam Jaw Y1(cm) = 7.5
+Beam Jaw Y2(cm) = 6.7
+Machine Energy = 6.0
+Machine Name = Varian 600C-6MV
+Source Axis Distance(cm) = 100.00
+
+Total Segment Number = 1
+
+Field No. = 1-1
+Field MU = 144.0
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -4.68,  LeafR0 = 4.68
+LeafL1 = -4.68,  LeafR1 = 4.68
+LeafL2 = -4.68,  LeafR2 = 4.68
+LeafL3 = -4.68,  LeafR3 = 4.68
+LeafL4 = -4.68,  LeafR4 = 4.68
+LeafL5 = -4.53,  LeafR5 = 4.68
+LeafL6 = 7.30,  LeafR6 = 7.35
+LeafL7 = 7.45,  LeafR7 = 7.35
+LeafL8 = 7.45,  LeafR8 = 7.35
+LeafL9 = 7.45,  LeafR9 = 7.35
+LeafL10 = 7.45,  LeafR10 = 7.35
+LeafL11 = 7.45,  LeafR11 = 7.35
+LeafL12 = 7.45,  LeafR12 = 7.35
+LeafL13 = 7.45,  LeafR13 = 7.35
+LeafL14 = 7.45,  LeafR14 = 7.35
+LeafL15 = 7.45,  LeafR15 = 7.35
+LeafL16 = 7.45,  LeafR16 = 7.35
+LeafL17 = 7.25,  LeafR17 = 7.05
+LeafL18 = 4.32,  LeafR18 = 6.60
+LeafL19 = 1.77,  LeafR19 = 6.15
+LeafL20 = -0.42,  LeafR20 = 5.90
+LeafL21 = -0.93,  LeafR21 = 5.40
+LeafL22 = -1.33,  LeafR22 = 5.00
+LeafL23 = -2.23,  LeafR23 = 5.00
+LeafL24 = -5.00,  LeafR24 = 5.00
+LeafL25 = -5.00,  LeafR25 = 5.00
+LeafL26 = -5.00,  LeafR26 = 5.00
+
+Note = The leaves positions are projected on the isocenter plane.
+CRC = 19634

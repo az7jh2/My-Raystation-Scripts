@@ -1,0 +1,612 @@
+Usage = TP_IMRTSTATIC
+Patient Name = ’‘«…∑Ô
+Patient ID = 3949
+Planning Time = 12-10-2015, 09:56:41
+Planning System = Topslane TPS 1.0.1978.138.V2.204161
+Plan UID = 1.2.840.123456.2.22.287.2.20151124.54.16
+Plan Fraction = 25
+Total Beam Number = 4
+
+DMLC = Topslane_M (27 Pairs)
+MLC Leaves Pair Number = 27
+Max Overtravel Distance(cm) = 8.0
+Source to MLC Top Edge Distance(cm) = 54.1
+DoseRate = 0
+
+Beam = Beam001
+Gantry Angle = 180.0
+Collimator Angle = 90.0
+Turntable Angle = 0.0
+
+Fieldsize X(cm) = 6.7
+Fieldsize Y(cm) = 14.0
+Beam Jaw X1(cm) = 3.4
+Beam Jaw X2(cm) = 3.4
+Beam Jaw Y1(cm) = 7.0
+Beam Jaw Y2(cm) = 7.0
+Machine Energy = 6.0
+Machine Name = VARIAN 6MV
+Source Axis Distance(cm) = 100.00
+
+Total Segment Number = 5
+
+Field No. = 5-1
+Field MU = 43.4
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = 4.50,  LeafR0 = -4.50
+LeafL1 = 4.50,  LeafR1 = -4.50
+LeafL2 = 4.50,  LeafR2 = -4.50
+LeafL3 = 4.50,  LeafR3 = -4.50
+LeafL4 = 4.50,  LeafR4 = -4.50
+LeafL5 = 4.50,  LeafR5 = -4.50
+LeafL6 = 4.50,  LeafR6 = -4.50
+LeafL7 = 4.50,  LeafR7 = -4.50
+LeafL8 = 4.50,  LeafR8 = -4.50
+LeafL9 = 4.50,  LeafR9 = -4.50
+LeafL10 = 4.50,  LeafR10 = -4.00
+LeafL11 = 4.50,  LeafR11 = -4.50
+LeafL12 = 4.50,  LeafR12 = -4.50
+LeafL13 = 6.00,  LeafR13 = -3.00
+LeafL14 = 6.00,  LeafR14 = -3.00
+LeafL15 = 6.00,  LeafR15 = -3.00
+LeafL16 = 6.00,  LeafR16 = -3.00
+LeafL17 = 5.50,  LeafR17 = -2.50
+LeafL18 = 5.50,  LeafR18 = -5.50
+LeafL19 = 5.50,  LeafR19 = -4.50
+LeafL20 = 5.50,  LeafR20 = -5.50
+LeafL21 = 5.50,  LeafR21 = -5.50
+LeafL22 = 5.50,  LeafR22 = -5.50
+LeafL23 = 5.50,  LeafR23 = -5.50
+LeafL24 = 5.50,  LeafR24 = -5.50
+LeafL25 = 5.50,  LeafR25 = -5.50
+LeafL26 = 5.50,  LeafR26 = -5.50
+
+Field No. = 5-2
+Field MU = 21.7
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = 6.00,  LeafR0 = -6.00
+LeafL1 = 6.00,  LeafR1 = -6.00
+LeafL2 = 6.00,  LeafR2 = -6.00
+LeafL3 = 6.00,  LeafR3 = -6.00
+LeafL4 = 6.00,  LeafR4 = -6.00
+LeafL5 = 6.00,  LeafR5 = -6.00
+LeafL6 = 6.00,  LeafR6 = -6.00
+LeafL7 = 6.00,  LeafR7 = -2.50
+LeafL8 = 6.00,  LeafR8 = -2.50
+LeafL9 = 6.00,  LeafR9 = -2.50
+LeafL10 = 4.00,  LeafR10 = -2.50
+LeafL11 = 3.00,  LeafR11 = -3.00
+LeafL12 = 3.00,  LeafR12 = -3.00
+LeafL13 = 3.00,  LeafR13 = -2.50
+LeafL14 = 3.00,  LeafR14 = -2.50
+LeafL15 = 3.00,  LeafR15 = -2.50
+LeafL16 = 3.00,  LeafR16 = -2.00
+LeafL17 = 2.50,  LeafR17 = -1.50
+LeafL18 = 2.50,  LeafR18 = -2.50
+LeafL19 = 3.00,  LeafR19 = -2.50
+LeafL20 = 3.00,  LeafR20 = -3.00
+LeafL21 = 3.00,  LeafR21 = -3.00
+LeafL22 = 3.00,  LeafR22 = -3.00
+LeafL23 = 3.00,  LeafR23 = -3.00
+LeafL24 = 3.00,  LeafR24 = -3.00
+LeafL25 = 3.00,  LeafR25 = -3.00
+LeafL26 = 3.00,  LeafR26 = -3.00
+
+Field No. = 5-3
+Field MU = 43.4
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = 2.50,  LeafR0 = -2.50
+LeafL1 = 2.50,  LeafR1 = -2.50
+LeafL2 = 2.50,  LeafR2 = -2.50
+LeafL3 = 2.50,  LeafR3 = -2.50
+LeafL4 = 2.50,  LeafR4 = -2.50
+LeafL5 = 2.50,  LeafR5 = -2.50
+LeafL6 = 2.50,  LeafR6 = -2.50
+LeafL7 = 2.50,  LeafR7 = -1.00
+LeafL8 = 2.50,  LeafR8 = -0.50
+LeafL9 = 2.50,  LeafR9 = 0.00
+LeafL10 = 2.50,  LeafR10 = 0.00
+LeafL11 = 5.50,  LeafR11 = 0.50
+LeafL12 = 5.50,  LeafR12 = 2.50
+LeafL13 = 2.50,  LeafR13 = 2.50
+LeafL14 = 2.50,  LeafR14 = 3.50
+LeafL15 = 2.50,  LeafR15 = 4.00
+LeafL16 = 2.00,  LeafR16 = 4.00
+LeafL17 = 1.50,  LeafR17 = 5.00
+LeafL18 = 5.50,  LeafR18 = 6.00
+LeafL19 = 2.50,  LeafR19 = 6.00
+LeafL20 = 2.50,  LeafR20 = 6.00
+LeafL21 = 0.00,  LeafR21 = 0.00
+LeafL22 = 0.00,  LeafR22 = 0.00
+LeafL23 = 0.00,  LeafR23 = 0.00
+LeafL24 = 0.00,  LeafR24 = 0.00
+LeafL25 = 0.00,  LeafR25 = 0.00
+LeafL26 = 0.00,  LeafR26 = 0.00
+
+Field No. = 5-4
+Field MU = 21.7
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = 0.00,  LeafR0 = 0.00
+LeafL1 = 0.00,  LeafR1 = 0.00
+LeafL2 = 0.00,  LeafR2 = 0.00
+LeafL3 = 0.00,  LeafR3 = 0.00
+LeafL4 = 0.00,  LeafR4 = 0.00
+LeafL5 = 0.00,  LeafR5 = 0.00
+LeafL6 = 0.00,  LeafR6 = 0.00
+LeafL7 = 1.50,  LeafR7 = 0.00
+LeafL8 = 1.50,  LeafR8 = 0.00
+LeafL9 = 1.50,  LeafR9 = 0.00
+LeafL10 = 0.00,  LeafR10 = 0.50
+LeafL11 = -0.50,  LeafR11 = 1.00
+LeafL12 = -0.50,  LeafR12 = 0.50
+LeafL13 = 0.50,  LeafR13 = 1.00
+LeafL14 = 0.50,  LeafR14 = 1.00
+LeafL15 = 0.50,  LeafR15 = 2.50
+LeafL16 = 0.00,  LeafR16 = 2.50
+LeafL17 = 0.50,  LeafR17 = 2.00
+LeafL18 = 0.00,  LeafR18 = 5.50
+LeafL19 = 0.00,  LeafR19 = 6.00
+LeafL20 = 0.00,  LeafR20 = 5.00
+LeafL21 = 0.00,  LeafR21 = 0.00
+LeafL22 = 0.00,  LeafR22 = 0.00
+LeafL23 = 0.00,  LeafR23 = 0.00
+LeafL24 = 0.00,  LeafR24 = 0.00
+LeafL25 = 0.00,  LeafR25 = 0.00
+LeafL26 = 0.00,  LeafR26 = 0.00
+
+Field No. = 5-5
+Field MU = 43.4
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = 1.00,  LeafR0 = -1.00
+LeafL1 = 1.00,  LeafR1 = -1.00
+LeafL2 = 1.00,  LeafR2 = -1.00
+LeafL3 = 1.00,  LeafR3 = -1.00
+LeafL4 = 1.00,  LeafR4 = -1.00
+LeafL5 = 1.00,  LeafR5 = -1.00
+LeafL6 = 1.00,  LeafR6 = -1.00
+LeafL7 = 1.00,  LeafR7 = -1.00
+LeafL8 = 1.00,  LeafR8 = -1.00
+LeafL9 = 1.00,  LeafR9 = -1.00
+LeafL10 = 1.00,  LeafR10 = 0.00
+LeafL11 = 1.00,  LeafR11 = 0.50
+LeafL12 = 1.00,  LeafR12 = 1.50
+LeafL13 = 1.00,  LeafR13 = 2.00
+LeafL14 = 1.00,  LeafR14 = 2.00
+LeafL15 = 1.00,  LeafR15 = 3.00
+LeafL16 = 0.50,  LeafR16 = 3.00
+LeafL17 = -2.00,  LeafR17 = 3.00
+LeafL18 = -2.00,  LeafR18 = 2.00
+LeafL19 = -2.00,  LeafR19 = 2.00
+LeafL20 = -2.00,  LeafR20 = 2.00
+LeafL21 = -2.00,  LeafR21 = 2.00
+LeafL22 = -2.00,  LeafR22 = 2.00
+LeafL23 = -2.00,  LeafR23 = 2.00
+LeafL24 = -2.00,  LeafR24 = 2.00
+LeafL25 = -2.00,  LeafR25 = 2.00
+LeafL26 = -2.00,  LeafR26 = 2.00
+
+Beam = Beam002
+Gantry Angle = 300.0
+Collimator Angle = 90.0
+Turntable Angle = 0.0
+
+Fieldsize X(cm) = 6.7
+Fieldsize Y(cm) = 14.0
+Beam Jaw X1(cm) = 3.4
+Beam Jaw X2(cm) = 3.4
+Beam Jaw Y1(cm) = 7.0
+Beam Jaw Y2(cm) = 7.0
+Machine Energy = 6.0
+Machine Name = VARIAN 6MV
+Source Axis Distance(cm) = 100.00
+
+Total Segment Number = 4
+
+Field No. = 4-1
+Field MU = 36.4
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = 3.00,  LeafR0 = -3.00
+LeafL1 = 3.00,  LeafR1 = -3.00
+LeafL2 = 3.00,  LeafR2 = -3.00
+LeafL3 = 3.00,  LeafR3 = -3.00
+LeafL4 = 3.00,  LeafR4 = -3.00
+LeafL5 = 3.00,  LeafR5 = -3.00
+LeafL6 = 3.00,  LeafR6 = -3.00
+LeafL7 = 3.00,  LeafR7 = -3.00
+LeafL8 = 3.00,  LeafR8 = -3.00
+LeafL9 = 3.00,  LeafR9 = -3.00
+LeafL10 = 3.00,  LeafR10 = -3.00
+LeafL11 = 3.00,  LeafR11 = -2.00
+LeafL12 = 3.00,  LeafR12 = 1.00
+LeafL13 = 3.50,  LeafR13 = 1.00
+LeafL14 = 4.00,  LeafR14 = 0.50
+LeafL15 = 4.50,  LeafR15 = 0.50
+LeafL16 = 5.00,  LeafR16 = 0.50
+LeafL17 = 4.00,  LeafR17 = 3.00
+LeafL18 = 3.00,  LeafR18 = 3.00
+LeafL19 = 3.00,  LeafR19 = 3.00
+LeafL20 = 3.00,  LeafR20 = -3.00
+LeafL21 = 3.00,  LeafR21 = -3.00
+LeafL22 = 3.00,  LeafR22 = -3.00
+LeafL23 = 3.00,  LeafR23 = -3.00
+LeafL24 = 3.00,  LeafR24 = -3.00
+LeafL25 = 3.00,  LeafR25 = -3.00
+LeafL26 = 3.00,  LeafR26 = -3.00
+
+Field No. = 4-2
+Field MU = 36.4
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = 0.00,  LeafR0 = 0.00
+LeafL1 = 0.00,  LeafR1 = 0.00
+LeafL2 = 0.00,  LeafR2 = 0.00
+LeafL3 = 0.00,  LeafR3 = 0.00
+LeafL4 = 0.00,  LeafR4 = 0.00
+LeafL5 = 0.00,  LeafR5 = 0.00
+LeafL6 = 0.00,  LeafR6 = 0.00
+LeafL7 = 1.50,  LeafR7 = 5.50
+LeafL8 = 1.50,  LeafR8 = 5.50
+LeafL9 = 2.00,  LeafR9 = 5.00
+LeafL10 = 2.00,  LeafR10 = 5.00
+LeafL11 = 3.00,  LeafR11 = 5.00
+LeafL12 = 3.00,  LeafR12 = 5.00
+LeafL13 = 4.00,  LeafR13 = 4.00
+LeafL14 = 4.00,  LeafR14 = 4.00
+LeafL15 = 5.00,  LeafR15 = 4.00
+LeafL16 = 5.00,  LeafR16 = 4.50
+LeafL17 = 4.00,  LeafR17 = 5.00
+LeafL18 = 3.50,  LeafR18 = 5.00
+LeafL19 = 3.00,  LeafR19 = 5.50
+LeafL20 = 3.00,  LeafR20 = 5.50
+LeafL21 = 0.00,  LeafR21 = 0.00
+LeafL22 = 0.00,  LeafR22 = 0.00
+LeafL23 = 0.00,  LeafR23 = 0.00
+LeafL24 = 0.00,  LeafR24 = 0.00
+LeafL25 = 0.00,  LeafR25 = 0.00
+LeafL26 = 0.00,  LeafR26 = 0.00
+
+Field No. = 4-3
+Field MU = 18.2
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -1.50,  LeafR0 = 1.50
+LeafL1 = -1.50,  LeafR1 = 1.50
+LeafL2 = -1.50,  LeafR2 = 1.50
+LeafL3 = -1.50,  LeafR3 = 1.50
+LeafL4 = -1.50,  LeafR4 = 1.50
+LeafL5 = -1.50,  LeafR5 = 1.50
+LeafL6 = -1.50,  LeafR6 = 1.50
+LeafL7 = -1.50,  LeafR7 = 5.00
+LeafL8 = -1.50,  LeafR8 = 5.00
+LeafL9 = -1.50,  LeafR9 = 5.50
+LeafL10 = -1.50,  LeafR10 = 5.50
+LeafL11 = -3.00,  LeafR11 = 4.50
+LeafL12 = -4.00,  LeafR12 = 4.00
+LeafL13 = -4.00,  LeafR13 = 5.00
+LeafL14 = -4.00,  LeafR14 = 5.00
+LeafL15 = -4.00,  LeafR15 = 5.50
+LeafL16 = -4.50,  LeafR16 = 5.50
+LeafL17 = -5.00,  LeafR17 = 5.50
+LeafL18 = -5.00,  LeafR18 = 6.00
+LeafL19 = -3.00,  LeafR19 = 5.00
+LeafL20 = 3.00,  LeafR20 = 5.00
+LeafL21 = 0.00,  LeafR21 = 0.00
+LeafL22 = 0.00,  LeafR22 = 0.00
+LeafL23 = 0.00,  LeafR23 = 0.00
+LeafL24 = 0.00,  LeafR24 = 0.00
+LeafL25 = 0.00,  LeafR25 = 0.00
+LeafL26 = 0.00,  LeafR26 = 0.00
+
+Field No. = 4-4
+Field MU = 18.2
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -2.00,  LeafR0 = 2.00
+LeafL1 = -2.00,  LeafR1 = 2.00
+LeafL2 = -2.00,  LeafR2 = 2.00
+LeafL3 = -2.00,  LeafR3 = 2.00
+LeafL4 = -2.00,  LeafR4 = 2.00
+LeafL5 = -2.00,  LeafR5 = 2.00
+LeafL6 = -2.00,  LeafR6 = 2.00
+LeafL7 = -2.00,  LeafR7 = 5.00
+LeafL8 = -2.00,  LeafR8 = 5.00
+LeafL9 = -2.50,  LeafR9 = 5.00
+LeafL10 = -4.00,  LeafR10 = 4.50
+LeafL11 = -4.00,  LeafR11 = 4.00
+LeafL12 = -4.00,  LeafR12 = 4.00
+LeafL13 = -4.00,  LeafR13 = 4.00
+LeafL14 = -4.00,  LeafR14 = 4.00
+LeafL15 = -4.00,  LeafR15 = 4.00
+LeafL16 = -4.00,  LeafR16 = 4.00
+LeafL17 = -3.00,  LeafR17 = 4.00
+LeafL18 = -3.00,  LeafR18 = 4.50
+LeafL19 = -3.00,  LeafR19 = 3.00
+LeafL20 = -3.00,  LeafR20 = 3.00
+LeafL21 = -3.00,  LeafR21 = 3.00
+LeafL22 = -3.00,  LeafR22 = 3.00
+LeafL23 = -3.00,  LeafR23 = 3.00
+LeafL24 = -3.00,  LeafR24 = 3.00
+LeafL25 = -3.00,  LeafR25 = 3.00
+LeafL26 = -3.00,  LeafR26 = 3.00
+
+Beam = Beam003
+Gantry Angle = 10.0
+Collimator Angle = 90.0
+Turntable Angle = 0.0
+
+Fieldsize X(cm) = 7.3
+Fieldsize Y(cm) = 15.0
+Beam Jaw X1(cm) = 3.4
+Beam Jaw X2(cm) = 3.9
+Beam Jaw Y1(cm) = 7.0
+Beam Jaw Y2(cm) = 8.0
+Machine Energy = 6.0
+Machine Name = VARIAN 6MV
+Source Axis Distance(cm) = 100.00
+
+Total Segment Number = 4
+
+Field No. = 4-1
+Field MU = 39.0
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -0.50,  LeafR0 = 0.50
+LeafL1 = -0.50,  LeafR1 = 0.50
+LeafL2 = -0.50,  LeafR2 = 0.50
+LeafL3 = -0.50,  LeafR3 = 0.50
+LeafL4 = -0.50,  LeafR4 = 0.50
+LeafL5 = -0.50,  LeafR5 = 0.50
+LeafL6 = -0.50,  LeafR6 = 0.50
+LeafL7 = -0.50,  LeafR7 = 5.00
+LeafL8 = -0.50,  LeafR8 = 5.00
+LeafL9 = 0.00,  LeafR9 = 5.00
+LeafL10 = 0.00,  LeafR10 = 5.50
+LeafL11 = 0.50,  LeafR11 = 5.50
+LeafL12 = 2.50,  LeafR12 = 6.00
+LeafL13 = 3.50,  LeafR13 = 6.00
+LeafL14 = 3.50,  LeafR14 = 6.00
+LeafL15 = 4.00,  LeafR15 = 6.00
+LeafL16 = 5.00,  LeafR16 = 6.00
+LeafL17 = 5.00,  LeafR17 = 5.50
+LeafL18 = 6.50,  LeafR18 = 5.50
+LeafL19 = 6.50,  LeafR19 = 2.00
+LeafL20 = 6.50,  LeafR20 = 2.00
+LeafL21 = 0.00,  LeafR21 = 0.00
+LeafL22 = 0.00,  LeafR22 = 0.00
+LeafL23 = 0.00,  LeafR23 = 0.00
+LeafL24 = 0.00,  LeafR24 = 0.00
+LeafL25 = 0.00,  LeafR25 = 0.00
+LeafL26 = 0.00,  LeafR26 = 0.00
+
+Field No. = 4-2
+Field MU = 39.0
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -1.00,  LeafR0 = 1.00
+LeafL1 = -1.00,  LeafR1 = 1.00
+LeafL2 = -1.00,  LeafR2 = 1.00
+LeafL3 = -1.00,  LeafR3 = 1.00
+LeafL4 = -1.00,  LeafR4 = 1.00
+LeafL5 = -1.00,  LeafR5 = 1.00
+LeafL6 = -1.00,  LeafR6 = 1.00
+LeafL7 = -1.00,  LeafR7 = 3.50
+LeafL8 = -1.00,  LeafR8 = 3.50
+LeafL9 = -0.50,  LeafR9 = 3.00
+LeafL10 = -1.00,  LeafR10 = 3.00
+LeafL11 = -1.00,  LeafR11 = 3.50
+LeafL12 = -1.50,  LeafR12 = 4.50
+LeafL13 = -1.50,  LeafR13 = 5.00
+LeafL14 = -1.50,  LeafR14 = 5.00
+LeafL15 = -1.00,  LeafR15 = 4.50
+LeafL16 = -1.00,  LeafR16 = 4.50
+LeafL17 = -0.50,  LeafR17 = 4.50
+LeafL18 = 0.00,  LeafR18 = 3.50
+LeafL19 = 0.00,  LeafR19 = 1.00
+LeafL20 = 0.00,  LeafR20 = 0.00
+LeafL21 = 0.00,  LeafR21 = 0.00
+LeafL22 = 0.00,  LeafR22 = 0.00
+LeafL23 = 0.00,  LeafR23 = 0.00
+LeafL24 = 0.00,  LeafR24 = 0.00
+LeafL25 = 0.00,  LeafR25 = 0.00
+LeafL26 = 0.00,  LeafR26 = 0.00
+
+Field No. = 4-3
+Field MU = 19.5
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = 3.00,  LeafR0 = -3.00
+LeafL1 = 3.00,  LeafR1 = -3.00
+LeafL2 = 3.00,  LeafR2 = -3.00
+LeafL3 = 3.00,  LeafR3 = -3.00
+LeafL4 = 3.00,  LeafR4 = -3.00
+LeafL5 = 3.00,  LeafR5 = -3.00
+LeafL6 = 3.00,  LeafR6 = -3.00
+LeafL7 = 3.00,  LeafR7 = -3.00
+LeafL8 = 3.00,  LeafR8 = -3.00
+LeafL9 = 3.00,  LeafR9 = -3.00
+LeafL10 = 3.00,  LeafR10 = -3.00
+LeafL11 = 3.00,  LeafR11 = -3.00
+LeafL12 = 3.00,  LeafR12 = -1.50
+LeafL13 = 3.50,  LeafR13 = -1.50
+LeafL14 = 3.50,  LeafR14 = -1.50
+LeafL15 = 3.50,  LeafR15 = -3.00
+LeafL16 = 5.00,  LeafR16 = -3.00
+LeafL17 = 4.00,  LeafR17 = -3.00
+LeafL18 = 4.00,  LeafR18 = 0.00
+LeafL19 = 5.50,  LeafR19 = 0.00
+LeafL20 = 6.50,  LeafR20 = 2.00
+LeafL21 = 0.00,  LeafR21 = 0.00
+LeafL22 = 0.00,  LeafR22 = 0.00
+LeafL23 = 0.00,  LeafR23 = 0.00
+LeafL24 = 0.00,  LeafR24 = 0.00
+LeafL25 = 0.00,  LeafR25 = 0.00
+LeafL26 = 0.00,  LeafR26 = 0.00
+
+Field No. = 4-4
+Field MU = 19.5
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -3.50,  LeafR0 = 3.50
+LeafL1 = -3.50,  LeafR1 = 3.50
+LeafL2 = -3.50,  LeafR2 = 3.50
+LeafL3 = -3.50,  LeafR3 = 3.50
+LeafL4 = -3.50,  LeafR4 = 3.50
+LeafL5 = -3.50,  LeafR5 = 3.50
+LeafL6 = -3.50,  LeafR6 = 3.50
+LeafL7 = -3.50,  LeafR7 = 4.50
+LeafL8 = -3.50,  LeafR8 = 4.50
+LeafL9 = -3.00,  LeafR9 = 4.00
+LeafL10 = -3.00,  LeafR10 = 4.00
+LeafL11 = -3.50,  LeafR11 = 5.00
+LeafL12 = -4.50,  LeafR12 = 5.00
+LeafL13 = -5.00,  LeafR13 = 6.00
+LeafL14 = -5.00,  LeafR14 = 5.50
+LeafL15 = -4.50,  LeafR15 = 6.00
+LeafL16 = -4.50,  LeafR16 = 5.50
+LeafL17 = -4.50,  LeafR17 = 6.00
+LeafL18 = -3.50,  LeafR18 = 5.50
+LeafL19 = -4.00,  LeafR19 = 5.50
+LeafL20 = -4.00,  LeafR20 = 4.00
+LeafL21 = -4.00,  LeafR21 = 4.00
+LeafL22 = -4.00,  LeafR22 = 4.00
+LeafL23 = -4.00,  LeafR23 = 4.00
+LeafL24 = -4.00,  LeafR24 = 4.00
+LeafL25 = -4.00,  LeafR25 = 4.00
+LeafL26 = -4.00,  LeafR26 = 4.00
+
+Beam = Beam004
+Gantry Angle = 55.0
+Collimator Angle = 90.0
+Turntable Angle = 0.0
+
+Fieldsize X(cm) = 7.3
+Fieldsize Y(cm) = 13.0
+Beam Jaw X1(cm) = 3.4
+Beam Jaw X2(cm) = 3.9
+Beam Jaw Y1(cm) = 6.0
+Beam Jaw Y2(cm) = 7.0
+Machine Energy = 6.0
+Machine Name = VARIAN 6MV
+Source Axis Distance(cm) = 100.00
+
+Total Segment Number = 4
+
+Field No. = 4-1
+Field MU = 22.3
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = 1.00,  LeafR0 = -1.00
+LeafL1 = 1.00,  LeafR1 = -1.00
+LeafL2 = 1.00,  LeafR2 = -1.00
+LeafL3 = 1.00,  LeafR3 = -1.00
+LeafL4 = 1.00,  LeafR4 = -1.00
+LeafL5 = 1.00,  LeafR5 = -1.00
+LeafL6 = 1.00,  LeafR6 = -1.00
+LeafL7 = 1.00,  LeafR7 = -1.00
+LeafL8 = 1.00,  LeafR8 = -0.50
+LeafL9 = 1.00,  LeafR9 = 0.00
+LeafL10 = 1.00,  LeafR10 = 0.00
+LeafL11 = 1.00,  LeafR11 = -0.50
+LeafL12 = 1.50,  LeafR12 = -0.50
+LeafL13 = 3.00,  LeafR13 = -1.00
+LeafL14 = 2.50,  LeafR14 = -1.50
+LeafL15 = 3.50,  LeafR15 = -1.50
+LeafL16 = 3.50,  LeafR16 = -2.00
+LeafL17 = 3.00,  LeafR17 = -2.00
+LeafL18 = 3.50,  LeafR18 = -2.00
+LeafL19 = 4.50,  LeafR19 = -2.00
+LeafL20 = 3.00,  LeafR20 = -1.50
+LeafL21 = 3.00,  LeafR21 = -3.00
+LeafL22 = 3.00,  LeafR22 = -3.00
+LeafL23 = 3.00,  LeafR23 = -3.00
+LeafL24 = 3.00,  LeafR24 = -3.00
+LeafL25 = 3.00,  LeafR25 = -3.00
+LeafL26 = 3.00,  LeafR26 = -3.00
+
+Field No. = 4-2
+Field MU = 44.6
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -1.00,  LeafR0 = 1.00
+LeafL1 = -1.00,  LeafR1 = 1.00
+LeafL2 = -1.00,  LeafR2 = 1.00
+LeafL3 = -1.00,  LeafR3 = 1.00
+LeafL4 = -1.00,  LeafR4 = 1.00
+LeafL5 = -1.00,  LeafR5 = 1.00
+LeafL6 = -1.00,  LeafR6 = 1.00
+LeafL7 = -1.00,  LeafR7 = 2.50
+LeafL8 = 0.00,  LeafR8 = 2.50
+LeafL9 = 0.00,  LeafR9 = 2.50
+LeafL10 = 0.00,  LeafR10 = 2.00
+LeafL11 = 0.50,  LeafR11 = 2.50
+LeafL12 = 0.50,  LeafR12 = 2.50
+LeafL13 = 1.00,  LeafR13 = 2.50
+LeafL14 = 1.50,  LeafR14 = 3.00
+LeafL15 = 1.50,  LeafR15 = 3.00
+LeafL16 = 2.00,  LeafR16 = 3.00
+LeafL17 = 2.00,  LeafR17 = 2.50
+LeafL18 = 2.00,  LeafR18 = 1.50
+LeafL19 = 2.00,  LeafR19 = 0.00
+LeafL20 = 2.00,  LeafR20 = -2.00
+LeafL21 = 2.00,  LeafR21 = -2.00
+LeafL22 = 2.00,  LeafR22 = -2.00
+LeafL23 = 2.00,  LeafR23 = -2.00
+LeafL24 = 2.00,  LeafR24 = -2.00
+LeafL25 = 2.00,  LeafR25 = -2.00
+LeafL26 = 2.00,  LeafR26 = -2.00
+
+Field No. = 4-3
+Field MU = 44.6
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = 0.00,  LeafR0 = 0.00
+LeafL1 = 0.00,  LeafR1 = 0.00
+LeafL2 = 0.00,  LeafR2 = 0.00
+LeafL3 = 0.00,  LeafR3 = 0.00
+LeafL4 = 0.00,  LeafR4 = 0.00
+LeafL5 = 0.00,  LeafR5 = 0.00
+LeafL6 = 0.00,  LeafR6 = 3.00
+LeafL7 = 0.00,  LeafR7 = 3.00
+LeafL8 = 0.50,  LeafR8 = 3.00
+LeafL9 = 0.50,  LeafR9 = 3.00
+LeafL10 = 0.50,  LeafR10 = 3.00
+LeafL11 = 1.00,  LeafR11 = 3.50
+LeafL12 = 2.50,  LeafR12 = 4.00
+LeafL13 = 2.50,  LeafR13 = 4.00
+LeafL14 = 3.00,  LeafR14 = 4.00
+LeafL15 = 3.00,  LeafR15 = 4.00
+LeafL16 = 3.50,  LeafR16 = 3.50
+LeafL17 = 4.00,  LeafR17 = 2.50
+LeafL18 = 4.00,  LeafR18 = 2.50
+LeafL19 = 5.00,  LeafR19 = 0.50
+LeafL20 = 5.00,  LeafR20 = 0.00
+LeafL21 = 0.00,  LeafR21 = 0.00
+LeafL22 = 0.00,  LeafR22 = 0.00
+LeafL23 = 0.00,  LeafR23 = 0.00
+LeafL24 = 0.00,  LeafR24 = 0.00
+LeafL25 = 0.00,  LeafR25 = 0.00
+LeafL26 = 0.00,  LeafR26 = 0.00
+
+Field No. = 4-4
+Field MU = 22.3
+MotorL = 24.95,  MotorR = 24.97
+LeafL0 = -0.50,  LeafR0 = 0.50
+LeafL1 = -0.50,  LeafR1 = 0.50
+LeafL2 = -0.50,  LeafR2 = 0.50
+LeafL3 = -0.50,  LeafR3 = 0.50
+LeafL4 = -0.50,  LeafR4 = 0.50
+LeafL5 = -0.50,  LeafR5 = 0.50
+LeafL6 = -0.50,  LeafR6 = 2.00
+LeafL7 = 0.50,  LeafR7 = 1.00
+LeafL8 = -1.00,  LeafR8 = 2.00
+LeafL9 = -0.50,  LeafR9 = 2.00
+LeafL10 = -0.50,  LeafR10 = 3.00
+LeafL11 = -2.50,  LeafR11 = 3.00
+LeafL12 = -2.50,  LeafR12 = 3.50
+LeafL13 = -2.50,  LeafR13 = 4.00
+LeafL14 = -4.00,  LeafR14 = 4.50
+LeafL15 = -4.00,  LeafR15 = 4.00
+LeafL16 = -3.00,  LeafR16 = 4.00
+LeafL17 = -3.00,  LeafR17 = 3.00
+LeafL18 = -3.00,  LeafR18 = 3.00
+LeafL19 = -3.00,  LeafR19 = 3.00
+LeafL20 = -3.00,  LeafR20 = 3.00
+LeafL21 = -3.00,  LeafR21 = 3.00
+LeafL22 = -3.00,  LeafR22 = 3.00
+LeafL23 = -3.00,  LeafR23 = 3.00
+LeafL24 = -3.00,  LeafR24 = 3.00
+LeafL25 = -3.00,  LeafR25 = 3.00
+LeafL26 = -3.00,  LeafR26 = 3.00
+
+Note = The leaves positions are projected on the isocenter plane.
+CRC = 15201

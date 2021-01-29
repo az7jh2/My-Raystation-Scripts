@@ -1,0 +1,23 @@
+TOPSLANE
+名称：DMLC-M型
+型号：AK-GDD02B-00
+序列号：DM080730
+生产日期：2008-07-30
+http://WWW.TOPSLANE.COM
+
+（其它属性未注明则为空）
+MLC Name:Topslane_M(27Pairs)
+Max Leaf Speed:1.5
+Leaf Gap:0.08
+Leaf Tolerence:3
+Max DVA Fields:280
+Min Leaf Speed:0.3
+Max Leaf Acceleration:3.3
+Max Extend Carriage:0
+MLC Tray Factor:1
+MaxSerro Travel:16.2
+MaxStep Travel:13.8
+Leaflength:13
+Setup Rotation Angel:90
+Exist Step Motor:True
+Allow Interleaf Motion:True
