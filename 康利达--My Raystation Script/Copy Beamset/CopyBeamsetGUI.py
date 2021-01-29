@@ -12,7 +12,7 @@ clr.AddReference("System.Core")
 import System
 clr.ImportExtensions(System.Linq)
 
-import CopyBeamset_V4
+import CopyBeamset_V5
 
 import ctypes
 #-----------------------------------------------------------------
@@ -57,7 +57,7 @@ class MainWindow(Window):
     self.lResult.Text ='Copy performing. Please wait...'
     self.lResult.Visibility=Visibility.Visible
     
-    r=CopyBeamset_V4.main(planname=self.selected_plan,beamsetname=self.selected_beamset,fromexamname=self.selected_FromCT,
+    r=CopyBeamset_V5.main(planname=self.selected_plan,beamsetname=self.selected_beamset,fromexamname=self.selected_FromCT,
       toexamname=self.selected_ToCT,mode=self.selected_mode,newplanname=self.selected_newplanname,newbeamsetname=self.selected_newbeamsetname)
     
     if r==0:
@@ -93,6 +93,7 @@ for plan in patient.TreatmentPlans:
     for beamset in plan.BeamSets:
         beamsets.Add(beamset.DicomPlanLabel)
 modes=['Copy from prototype','Zeros','Rigid Registration']
-        
+for poi in patient.PatientModel.PointsOfInterest:
+    modes.Add(poi.Name)        
 dialog = MainWindow("Copy Beamset",imagesets,plans,beamsets,modes)
 dialog.ShowDialog()
