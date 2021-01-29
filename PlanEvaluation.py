@@ -7,6 +7,13 @@ from collections import OrderedDict
 import clr
 clr.AddReference('Microsoft.Office.Interop.Excel')
 from Microsoft.Office.Interop import Excel
+import ctypes
+#全局变量
+plandeletelist=[]
+roideletelist=[]
+#-----------------------------------------------------------------
+def Mbox(title, text, style):
+	ctypes.windll.user32.MessageBoxW(0, text, title, style)
 #-------------------------------------------------------------------------------------------------------------#
 #求ROI的某剂量覆盖绝对体积
 #在DVH中找出该剂量对应的相对体积，乘以该ROI的绝对全部体积
@@ -55,14 +62,17 @@ def exporttoexcel(patientname,total_outcome,plans):
                     i+=1
 #---------------------------------------------------------------------------------#
 def check(gather,objects):
+    global  plandeletelist,roideletelist
     index=range(len(objects))
     index.reverse()
     for i in index:
         if isinstance(objects[i],str): #列表中的对象为str类型，表明是planlist的名称判断
             if not(objects[i] in gather):
+                plandeletelist.append(objects[i])
                 objects.remove(objects[i])
         elif isinstance(objects[i],dict): #列表中的对象为dict类型，表明是oarlist的名称判断
             if not(objects[i]['name'] in gather):
+                roideletelist.append(objects[i]['name'])
                 objects.remove(objects[i])
 #-------------------------------------------------------------------------------------#
 def getdoseindicators(total_dose,ROI,extername):
@@ -102,6 +112,7 @@ def getdoseindicators(total_dose,ROI,extername):
     return d
 #---------------------------------------------------------------------------------#
 def main(patients,plans,targets,OARs):
+    global  plandeletelist,roideletelist
     if not patients:  #patients不为空
         patient=get_current('Patient')
     #检查对象是否存在
@@ -137,22 +148,30 @@ def main(patients,plans,targets,OARs):
           
         total_outcome.append(outcome)
         exporttoexcel(patient.PatientName,total_outcome,plans)
+        outputtext=''
+        if plandeletelist:
+            outputtext=outputtext+'plan '+','.join(plandeletelist)+' are not found and deleted.\n'
+        if roideletelist:
+            outputtext=outputtext+'ROI '+','.join(roideletelist)+' are not found and deleted.\n'
+        outputtext+='Please check it'
+
+        Mbox('Warning' , outputtext , 0)
 #--------------------------------------------------------------------------------------------------------------#
 if __name__=='__main__':
     main(patients=[],plans=['Copy'],targets=[{'name':'APGTVnx','Ds':[2,50,95,98],'Vs':[],'special':['CI','HI','Volume'],'prescription':7400},
     {'name':'APGTVnd','Ds':[2,50,95,98],'Vs':[],'special':['CI','HI','Volume'],'prescription':7000},
     {'name':'APCTV1','Ds':[2,50,95,98],'Vs':[],'special':['CI','HI','Volume'],'prescription':6000},
     {'name':'APCTV2+APCTVnd','Ds':[2,50,95,98],'Vs':[],'special':['CI','HI','Volume'],'prescription':5400}],
-    OARs=[{'name':'Brain Stem+3 PRV','Ds':[50],'Vs':[10,15,20,25,30,35,40,45,50,54,55,60],'special':['max']},
-    {'name':'Spinal Cord+5 PRV','Ds':[1,5,10,50],'Vs':[50],'special':['max']},
-    {'name':'Temporal Lobe L','Ds':[],'Vs':[60,65,70],'special':['max','mean','0.5cc','1cc']},
-    {'name':'Temporal Lobe L PRV','Ds':[],'Vs':[],'special':['max','mean']},
-    {'name':'Temporal Lobe R','Ds':[],'Vs':[60,65,70],'special':['max','mean','0.5cc','1cc']},
-    {'name':'Temporal Lobe R PRV','Ds':[],'Vs':[],'special':['max','mean']},
-    {'name':'Optic Chiasm PRV','Ds':[1,5,10],'Vs':[],'special':['max','mean']},
-    {'name':'Optic Nerver L PRV','Ds':[1,5,10],'Vs':[],'special':['max','mean']},
-    {'name':'Optic Nerve R PRV','Ds':[1,5,10],'Vs':[],'special':['max','mean']},
-    {'name':'Ear L','Ds':[],'Vs':[],'special':['max','mean']},
-    {'name':'Ear R','Ds':[],'Vs':[],'special':['max','mean']},
-    {'name':'Parotid gland L','Ds':[],'Vs':[30],'special':['mean']},
-    {'name':'Parotid gland R','Ds':[],'Vs':[30],'special':['mean']}])
+    OARs=[{'name':'Brain Stem','Ds':[2,50],'Vs':[],'special':['max','mean']},
+    {'name':'Brain Stem+3 PRV','Ds':[2],'Vs':[60,65],'special':['max','mean','Volume']},
+    {'name':'Spinal Cord','Ds':[2,50],'Vs':[],'special':['max','mean']},
+    {'name':'Spinal Cord+5 PRV','Ds':[2],'Vs':[50],'special':['max','mean','Volume']},
+    {'name':'Temporal Lobe L','Ds':[2,5],'Vs':[60,65,70],'special':['max','mean','1cc','Volume']},
+    {'name':'Temporal Lobe R','Ds':[2,5],'Vs':[60,65,70],'special':['max','mean','1cc','Volume']},
+    {'name':'Optic Chiasm','Ds':[1,2,5],'Vs':[],'special':['max','mean']},
+    {'name':'Optic Nerve L','Ds':[1,2,5],'Vs':[],'special':['max','mean']},
+    {'name':'Optic Nerve R','Ds':[1,2,5],'Vs':[],'special':['max','mean']},
+    {'name':'Ear L','Ds':[2],'Vs':[55],'special':['max','mean']},
+    {'name':'Ear R','Ds':[2],'Vs':[55],'special':['max','mean']},
+    {'name':'Parotid L','Ds':[],'Vs':[30],'special':['mean']},
+    {'name':'Parotid R','Ds':[],'Vs':[30],'special':['mean']}])
