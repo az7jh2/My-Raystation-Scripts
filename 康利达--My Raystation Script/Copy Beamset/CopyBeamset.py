@@ -8,7 +8,7 @@ import ctypes
 def Mbox(title, text, style):
     ctypes.windll.user32.MessageBoxW(0, text, title, style)
 #---------------------------------------------------------------------------------#
-def copybeam(patient,beamset,fromexamname,toexamname,mode,newplanname,newbeamsetname):
+def copybeam(patient,beamset,fromexamname,toexamname,mode,newplanname,newbeamsetname,POIs):
     #复制所选射束集参数
     modality = beamset.Modality  #如Photons
     plantech = beamset.PlanGenerationTechnique  #如IMRT
@@ -59,6 +59,11 @@ def copybeam(patient,beamset,fromexamname,toexamname,mode,newplanname,newbeamset
             xpos=newiso.x
             ypos=newiso.y
             zpos=newiso.z
+        elif mode in POIs:
+            newiso=patient.PatientModel.StructureSets[toexamname].PoiGeometries[mode].Point
+            xpos=newiso.x
+            ypos=newiso.y
+            zpos=newiso.z
         else:
             raise RuntimeError('The selected mode of setting isocenter is wrong') 
         energy = beam.MachineReference.Energy
@@ -83,7 +88,10 @@ def copybeam(patient,beamset,fromexamname,toexamname,mode,newplanname,newbeamset
 def main(planname,beamsetname,fromexamname,toexamname,mode,newplanname,newbeamsetname):
     #patient获取为当前患者
     patient=get_current('Patient')
-    
+    #所有POI
+    POIs=[]
+    for poi in patient.PatientModel.PointsOfInterest:
+        POIs.append(poi.Name)
     #判断计划和射束集
     try:
         beam_set=patient.TreatmentPlans[planname].BeamSets[beamsetname]
@@ -117,8 +125,14 @@ def main(planname,beamsetname,fromexamname,toexamname,mode,newplanname,newbeamse
     #计算新射束名称位数
     if len(newbeamsetname)>16:
         newbeamsetname=newbeamsetname[:16]
+    #判断所选POI是否和CT对应
+    if mode in POIs:
+        if patient.PatientModel.StructureSets[toexamname].PoiGeometries[mode].Point.x<-10000:
+            Mbox('Warning','The selected ISO is not corresponding to the to new CT',0)
+            return 0
     #复制射野至指定CT
-    copybeam(patient=patient,beamset=beam_set,fromexamname=fromexamname,toexamname=toexamname,mode=mode,newplanname=newplanname,newbeamsetname=newbeamsetname)
+    copybeam(patient=patient,beamset=beam_set,fromexamname=fromexamname,toexamname=toexamname,mode=mode,newplanname=newplanname,newbeamsetname=newbeamsetname,
+      POIs=POIs)
     
     #设置网格，计算剂量
     patient.TreatmentPlans[newplanname].SetDefaultDoseGrid(VoxelSize={ 'x': 0.3, 'y': 0.3, 'z': 0.3 })
